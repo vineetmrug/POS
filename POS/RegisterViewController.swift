@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import POSBillCalculator
 
 class RegisterViewController: UIViewController {
     let cellIdentifier = "Cell"
@@ -154,8 +155,8 @@ class RegisterViewModel {
         return formatter
     }()
     
-    var orderItems: [BillItem] = []
-    let billCalculator = BillCalculator()
+    var orderItems: [POSBillItem] = []
+    let billCalculator = POSBillCalculator()
     
     func menuCategoryTitle(in section: Int) -> String? {
         return categories[section].name
@@ -215,7 +216,7 @@ class RegisterViewModel {
         orderItems[indexPath.row].isTaxExempt = !orderItems[indexPath.row].isTaxExempt
     }
     
-    func generateBill() -> Bill {
+    func generateBill() -> POSBill {
         return billCalculator.generateBill(billItems: orderItems, taxes: taxesEnabled, discounts: discountsEnabled)
     }
 }
