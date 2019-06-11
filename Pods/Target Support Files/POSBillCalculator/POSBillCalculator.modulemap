@@ -1,0 +1,6 @@
+framework module POSBillCalculator {
+  umbrella header "POSBillCalculator-umbrella.h"
+
+  export *
+  module * { export * }
+}

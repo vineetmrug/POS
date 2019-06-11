@@ -1,0 +1,16 @@
+PODS:
+  - POSBillCalculator (0.1.0)
+
+DEPENDENCIES:
+  - POSBillCalculator (~> 0.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - POSBillCalculator
+
+SPEC CHECKSUMS:
+  POSBillCalculator: 00ce4508be49e63e928f21a2773794a12d9ba9f5
+
+PODFILE CHECKSUM: 54253729cff80e525d536817f42e151b2f173536
+
+COCOAPODS: 1.7.1
