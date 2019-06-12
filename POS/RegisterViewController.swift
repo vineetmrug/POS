@@ -108,7 +108,6 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         if tableView == menuTableView {
             let indexPaths = [viewModel.addItemToOrder(at: indexPath)]
             orderTableView.insertRows(at: indexPaths, with: .automatic)
-            // calculate bill totals
         
         } else if tableView == orderTableView {
             viewModel.toggleTaxForOrderItem(at: indexPath)
@@ -131,7 +130,6 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         if tableView == orderTableView && editingStyle == .delete {
             viewModel.removeItemFromOrder(at: indexPath)
             orderTableView.deleteRows(at: [indexPath], with: .automatic)
-            // calculate bill totals
             updateBillView()
         }
     }
